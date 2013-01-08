@@ -1,0 +1,3 @@
+guacamole{"installguacamole":
+  password=>'examplepassword'
+}
