@@ -1,0 +1,28 @@
+{
+  "description": "guacamole\n\nThis class installs and configures guacamole\n\nIn the latest release we have removed tightvncserver from the class so you can choose whether you want to use this server or not. We there for recommend that you also use runthebusiness-tightvncserver with module.\n\nAfter installing you will still need to run: tightvncserver from command line and set up it's password before guacamole can be used (if you are using tight vnc) -- we could not find a way to automate this part of the process.\n\nExamples:\n\ttightvncserver {\"installtightvncserver\":\n    \n  \t}\n\tguacamole{\"installguacamole\":\n\t  password=>'examplepassword',\n\t  require=>tightvncserver[\"installtightvncserver\"]\n\t}\n\n\nThis module has been tested in debian squeeze. The init.pp and params.pp files have place-holders for the functionality to include other flavors. If you would like to contribute the code to enable these other flavors please let us know.\n\nAuthors\n-------\nWill Ferrer, Ethan Brooks\n\nLicensees\n-------\n2012 developed under license for Switchsoft LLC http://www.switchsoft.com a \"Direct response telephony company\" as part of it's \"VOIP Call distribution, ROI analysis platform, call recording, and IVR for inbound and outbound sales\" and Run the Business Systems LLC a \"Technology development investment group\" as part of it's \"PHP, Javascript rapid application development framework and MySQL analysis tools\"\n\nLicense\n-------\nLicensed under the terms of the Open Source LGPL 3.0 license.  \n\n\nContact\n-------\nwill.ferrer@runthebusiness.net\n\nSupport\n-------\n\nPlease send tickets and issues to our contact email address or at: https://github.com/runthebusiness/puppet-guacamole/issues\n\nProject Url\n-------\nhttps://github.com/runthebusiness/puppet-guacamole\n",
+  "summary": "This class installs and configures guacamole",
+  "source": "UNKNOWN",
+  "dependencies": [
+    {
+      "version_requirement": "==1.0.0",
+      "name": "runthebusiness/fetchfile"
+    }
+  ],
+  "checksums": {
+    "manifests/params.pp": "29741f05b2fed14463f1ced1505606c0",
+    "templates/proxy.erb": "bdab78805c56b8d38018bef90b0abf2a",
+    "templates/user-mapping.erb": "37267594e58e3723563f858d34ef237c",
+    "README": "1da575e17039301688461852ef5dc686",
+    "tests/init.pp": "4ad7455b958b0a5df0ef523c68ae5f36",
+    "Modulefile": "58bbef28a3757d4379ed73ed75a323ff",
+    "manifests/init.pp": "eca11d046c4afafa7b2c61a6f651a4e1"
+  },
+  "types": [
+
+  ],
+  "license": "Apache License, Version 2.0",
+  "author": "runthebusiness",
+  "name": "runthebusiness-guacamole",
+  "project_page": "https://github.com/runthebusiness/puppet-guacamole",
+  "version": "1.0.3"
+}
